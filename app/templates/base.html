@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+  <head>
+  	<meta name="description" content="My fist web app in python" charset="utf-8"/>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+
+    {% if title %}
+    <title>{{ title }}</title>
+    {% else %}
+    <title>Welcome to my page</title>
+    {% endif %}
+
+  </head>
+
+  <body>
+    <div class="navbar navbar-default">
+      <div class="container">
+	     <div id="navbar" class="collapse navbar-collapse">  
+	        <ul class="nav navbar-nav">
+    	      	<li><a href="/index">Home</a></li>
+        	  	<li><a href="/learnvocab">Learn Vocab</a></li>
+          		<li><a href="/words">Dictionary</a></li>
+          		<li><a href="/login">Sign In</a></li>
+        	</ul>
+     	  </div>
+      </div>
+    </div>
+    
+    {% block content %}
+    {% endblock %}
+    
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js">
+	</script>
+   
+  </body>
+</html>

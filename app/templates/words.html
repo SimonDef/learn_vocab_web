@@ -1,0 +1,28 @@
+{% extends "base.html" %}
+
+{% block content %}   
+    <div class="jumbotron tex-center">
+      <div class="container">
+     	<h1> Words </h1>
+     	<p>This is a {{ language1 }} to {{ language2 }} dictionary</p>
+  
+		<table class="table table-striped">
+	    	<thead>
+    		<tr>
+        		<th>{{ language1 }}</th>
+        		<th>{{ language2 }}</th>
+      		</tr>
+    		</thead>
+    		<tbody>
+      		{% for word in words %}
+      		<tr>
+        		<td>{{word[0]}}</td>
+        		<td>{{word[1]}}</td>
+      		</tr>
+      		{% endfor %}
+    		</tbody>
+  		  </table>
+		</div>
+	  </div>
+	  
+{% endblock %}

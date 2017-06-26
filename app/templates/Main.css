@@ -1,0 +1,65 @@
+.nav a {
+  color: #5a5a5a;
+  font-size: 11px;
+  font-weight: bold;
+  padding: 14px 10px;
+  text-transform: uppercase;
+}
+
+.nav li {
+  display: inline;
+}
+
+.jumbotron {
+  background-image:url('http://media.istockphoto.com/photos/wall-and-door-picture-id509609880?k=6&m=509609880&s=170667a&w=0&h=nyryPhnRa4mC8nnOxrXwUqhqbvCpugOKdL6P3w3jBeY=');
+  height: 500px;
+  background-repeat: repeat;
+  background-size: contain;
+  background-color: #62B1DF;
+}
+
+.jumbotron .container {
+  position: relative;
+  top:100px;
+}
+
+.jumbotron h1 {
+  color: #5a5a5a;
+  font-size: 36px;  
+  font-family:Lato, Helvetica, Arial, sans-serif;
+  font-style: normal;
+  font-weight: normal;
+}
+
+.jumbotron p {
+  font-size: 20px;
+  color: #5a5a5a;
+}
+
+.joindeliver-wrapper {
+    background: #174a63;
+    width: 100%;
+}
+
+.joindeliver-container {
+    width: 310px;
+    margin: auto;
+    padding: 25px 0;
+	color: #fff;
+    font-size: 18px;
+}
+
+
+.learn-more {
+  background-color: #f7f7f7;
+}
+
+.learn-more h3 {
+  font-family:Lato, Helvetica, Arial, sans-serif;
+  font-size: 18px;
+  font-weight: normal;
+}
+
+.learn-more a {
+  color: #00b0ff;
+}

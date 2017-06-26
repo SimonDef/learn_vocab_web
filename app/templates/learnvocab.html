@@ -1,0 +1,50 @@
+<!-- extend base layout -->
+{% extends "base.html" %}
+
+{% block content %}
+<div class="jumbotron text-center">
+<div class="container">
+ <h1>Learn your vocab</h1>
+ {% from "includes/_formhelpers.html" import render_field %}
+
+<form action="" method="get">
+	<div class="form-group">
+		<hr>
+		{% if testword %}
+			{% if tested_language == language1 %}
+				<p>How do you say "{{ testword[1] }}" in <strong>{{ language1 }}</strong>?</p>
+    		{% else %}
+    			<p>How do you say "{{ testword[0] }}" in <strong>{{ language2 }}</strong>?</p>
+			{% endif %}
+		{% else %}
+	   		<p>{{message}}</p>
+		{% endif %}
+	</div>
+</form>
+
+<form action="" method="post">
+	<div class="form-group">
+		{{render_field(form.reply, class_="form-control")}}
+	</div>
+	<p><input type="submit"	class="btn btn-primary" value="Submit"></p>
+</form>
+
+<form action="" method="get">
+	<p><input type="submit"	class="btn btn-success" value="Next Question"></p>
+</form>
+
+<hr>
+    {% with messages = get_flashed_messages() %}
+      {% if messages %}
+        <ul>
+        {% for message in messages %}
+            <li>{{ message }} </li>
+        {% endfor %}
+        </ul>
+      {% endif %}
+    {% endwith %}
+
+
+</div>
+
+{% endblock %}
